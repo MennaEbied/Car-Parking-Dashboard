@@ -57,7 +57,7 @@ const Widget = ({ type }) => {
         <span className="title">{data.title}</span>
         <span className="details">{data.details}</span>
         <span className="percentage">
-          <span miniIcon>{data.miniIcon}</span>
+          <span className="miniIcon">{data.miniIcon}</span>
          {data.percentage}
         </span>
       </div>
