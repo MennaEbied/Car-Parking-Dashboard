@@ -1,10 +1,11 @@
 .navbar {
   height: 50px;
-  border-bottom: 0.5px solid rgb(231, 229, 229);
+  //border-bottom: 0.5px solid rgb(231, 229, 229);
   display: flex;
   align-items: center;
   font-size: 14px;
   color: #555;
+  margin-top: 5px;
 
   .wrapper {
     width: 100%;
@@ -12,7 +13,6 @@
     align-items: center;
     padding: 20px;
     justify-content: space-between;
-    
 
     .search {
       display: flex;
@@ -20,7 +20,6 @@
       border: 0.5px solid lightgray;
       padding: 3px;
       border-radius: 10px;
-     
 
       input {
         border: none;
@@ -46,12 +45,12 @@
       position: relative;
       margin-right: 5px;
 
-      hr{
+      hr {
         border-left: 0.5px solid rgb(231, 231, 231);
         height: 25px;
         margin-right: 10px;
       }
-      .text{
+      .text {
         margin-right: 20px;
       }
 
@@ -63,7 +62,7 @@
         height: 30px;
         border-radius: 50%;
       }
-      .counter{
+      .counter {
         width: 15px;
         height: 15px;
         background-color: rgb(233, 29, 29);
