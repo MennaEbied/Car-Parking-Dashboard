@@ -52,7 +52,7 @@ const Barchart=()=> {
   return (
     <div className="barChart">
       <div className="title">Parking Duration</div>
-    <ResponsiveContainer width={350} height={300}>
+    <ResponsiveContainer width={450} aspect={2/1}>
       <BarChart
         data={data}
         margin={{
