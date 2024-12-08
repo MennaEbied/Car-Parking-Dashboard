@@ -1,13 +1,28 @@
-.home{
-   display: flex;
+.home {
+  display: flex;
 
-   .homeContainer{
+  .homeContainer {
     flex: 8;
 
-    .widgets{
+    .widgets,
+    .charts {
       display: flex;
       padding: 20px;
       gap: 20px;
     }
-   }
+    .charts {
+      padding: 5px 20px;
+    }
+    .listContainer {
+      box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.47);
+      -webkit-box-shadow: 2px 4px 10px 1px rgba(201, 201, 201, 0.47);
+      border-radius: 20px;
+      padding: 20px;
+      margin: 20px;
+      .listTitle{
+        margin-bottom: 10px;
+        color: grey;
+      }
+    }
+  }
 }
