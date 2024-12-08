@@ -1,8 +1,15 @@
+import Navbar from '../../components/navbar/Navbar'
+import Sidebar from '../../components/sidebar/Sidebar'
 import './users.scss'
 
 const Users = () => {
   return (
-    <div className='users'>Users</div>
+    <div className='users'>
+      <Sidebar/>
+      <div className="container">
+        <Navbar/>
+      </div>
+    </div>
   )
 }
 

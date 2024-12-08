@@ -1,8 +1,15 @@
+import Navbar from '../../components/navbar/Navbar'
+import Sidebar from '../../components/sidebar/Sidebar'
 import './reports.scss'
 
 const Reports = () => {
   return (
-    <div className='reports'>Reports</div>
+    <div className='reports'>
+      <Sidebar/>
+      <div className="container">
+        <Navbar/>
+      </div>
+    </div>
   )
 }
 
