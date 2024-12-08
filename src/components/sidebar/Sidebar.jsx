@@ -3,7 +3,7 @@ import SpaceDashboardIcon from "@mui/icons-material/SpaceDashboard";
 import ReceiptLongIcon from "@mui/icons-material/ReceiptLong";
 import GroupIcon from "@mui/icons-material/Group";
 import ArticleIcon from "@mui/icons-material/Article";
-import { Link } from 'react-router-dom'
+import { Link } from "react-router-dom";
 
 const Sidebar = () => {
   return (
@@ -14,36 +14,31 @@ const Sidebar = () => {
       <hr />
       <div className="center">
         <ul>
-        <Link to='/' style={{textDecoration:'none'}}>
-          <li>
-            <SpaceDashboardIcon className="icon" />
-            <span>Dashboard</span>
-          </li>
+          <Link to="/" style={{ textDecoration: "none" }}>
+            <li>
+              <SpaceDashboardIcon className="icon" />
+              <span>Dashboard</span>
+            </li>
           </Link>
-          <Link to='/bookings' style={{textDecoration:'none'}}>
-          <li>
-            <ReceiptLongIcon className="icon" />
-            <span>Bookings</span>
-          </li>
+          <Link to="/bookings" style={{ textDecoration: "none" }}>
+            <li>
+              <ReceiptLongIcon className="icon" />
+              <span>Bookings</span>
+            </li>
           </Link>
-          <Link to='/users' style={{textDecoration:'none'}}>
-          <li>
-            <GroupIcon className="icon" />
-            <span>Users</span>
-          </li>
+          <Link to="/users" style={{ textDecoration: "none" }}>
+            <li>
+              <GroupIcon className="icon" />
+              <span>Users</span>
+            </li>
           </Link>
-          <Link to='/reports' style={{textDecoration:'none'}}>
-          <li>
-            <ArticleIcon className="icon" />
-            <span>Reports</span>
-          </li>
-          </Link> 
+          <Link to="/reports" style={{ textDecoration: "none" }}>
+            <li>
+              <ArticleIcon className="icon" />
+              <span>Reports</span>
+            </li>
+          </Link>
         </ul>
-      </div>
-      <div className="bottom">
-        <div className="colorOption"></div>
-        <div className="colorOption"></div>
-        <div className="colorOption"></div>
       </div>
     </div>
   );
