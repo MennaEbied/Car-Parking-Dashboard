@@ -4,8 +4,6 @@ import Home from "./pages/home/Home";
 import Reports from "./pages/reports/Reports";
 import Single from "./pages/single/Single";
 import Users from "./pages/users/Users";
-import UsersList from "./pages/usersList/UsersList";
-
 import { useState, useMemo, createContext, useContext } from "react";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import { CssBaseline, Button } from "@mui/material";
