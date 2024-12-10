@@ -68,8 +68,8 @@ const Barchart=()=> {
         <Tooltip />
         <Bar
           dataKey="duration"
-          fill="#4b49ac"
-          activeBar={<Rectangle  stroke="purple" />}
+          fill="#067BC2"
+          activeBar={<Rectangle  stroke="grey" />}
         />
       </BarChart>
     </ResponsiveContainer>

@@ -12,7 +12,7 @@
     .logo {
       font-size: 20px;
       font-weight: bold;
-      color: #4b49ac;
+      color: #067BC2;
     }
   }
 
@@ -37,7 +37,8 @@
         cursor: pointer;
 
         &:hover {
-          background-color: rgb(222, 239, 245);
+          background-color: #F2F3F4;
+          border-radius: 5px;
         }
 
         span {
@@ -47,7 +48,7 @@
         }
 
         .icon {
-          color: #4b49ac;
+          color: #067BC2;
           font-size: 18px;
           font-weight: 600;
         }

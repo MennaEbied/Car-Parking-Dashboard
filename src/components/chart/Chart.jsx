@@ -32,8 +32,8 @@ const Chart = () => {
         >
           <defs>
             <linearGradient id="ParkingSpots" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="5%" stopColor="#4b49ac" stopOpacity={0.8} />
-              <stop offset="95%" stopColor="#4b49ac" stopOpacity={0} />
+              <stop offset="5%" stopColor="#84BCDA" stopOpacity={0.8} />
+              <stop offset="95%" stopColor="#84BCDA" stopOpacity={0} />
             </linearGradient>
           </defs>
           <XAxis dataKey="name" stroke="grey" />
@@ -41,7 +41,7 @@ const Chart = () => {
           <Area
             type="monotone"
             dataKey="ParkingSpots"
-            stroke="#4b49ac"
+            stroke="#84BCDA"
             fillOpacity={1}
             fill="url(#ParkingSpots)"
           />
