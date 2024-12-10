@@ -5,7 +5,7 @@ import Reports from "./pages/reports/Reports";
 import Single from "./pages/single/Single";
 import Users from "./pages/users/Users";
 import UsersList from "./pages/usersList/UsersList";
-import './styles/dark.scss'
+
 
 function App() {
   return (
