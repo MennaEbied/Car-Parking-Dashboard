@@ -18,8 +18,8 @@ app.get("/users", async (req, res) => {
     const users = listUsersResult.users.map((user) => ({
       id: user.uid, // Rename `uid` to `id`
       email: user.email || "N/A",
-      phoneNumber: user.phoneNumber || "N/A",
-      displayName: user.displayName || "N/A",
+      createdAt: user.metadata.creationTime || "N/A", // Add creation time
+      lastSignInTime: user.metadata.lastSignInTime || "N/A", // Add last sign-in time
     }));
     res.json(users);
   } catch (error) {
