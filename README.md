@@ -1,8 +1,53 @@
-# React + Vite
+# Car Parking Admin Dashboard 🚗
+A modern admin dashboard built with React and SCSS for managing car parking operations.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Technologies Used 🛠️
+Frontend:
 
-Currently, two official plugins are available:
+React (with React Router for navigation)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+SCSS (for styling)
+
+API Integration:
+
+Axios (for API calls)
+
+UI Components:
+
+Custom components or libraries like Material-UI and Recharts
+
+## Prerequisites 📋
+Before running the project, ensure you have the following installed:
+
+Node.js (v16 or higher)
+
+npm or Yarn
+
+## API Integration 🌐
+
+Use Axios for making HTTP requests.
+
+Store the API base URL in the .env file
+
+
+## Setup Instructions 🚀
+
+### Clone the Repository :
+
+```git clone https://github.com/MennaEbied/Car-Parking-Dashboard.git```
+
+```cd Car-Parking-Dashboard```
+
+### Install Dependencies
+
+```npm install```
+
+### Start Development Server:
+
+```npm run dev ```
+
+### Start Backend Server:
+
+```cd backend```
+
+```node index.js```
