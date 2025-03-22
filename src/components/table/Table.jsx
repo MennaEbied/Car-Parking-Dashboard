@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { DataGrid } from "@mui/x-data-grid";
 import Paper from "@mui/material/Paper";
 import axios from "axios";
@@ -6,8 +6,8 @@ import axios from "axios";
 const columns = [
   { field: "id", headerName: "ID", width: 200 },
   { field: "email", headerName: "Email", width: 200 },
-  { field: "phoneNumber", headerName: "Phone Number", width: 150 },
-  { field: "displayName", headerName: "Name", width: 150 },
+  { field: "createdAt", headerName: "Created At", width: 200 }, // Ensure this matches the data key
+  { field: "lastSignInTime", headerName: "Last Sign In", width: 200 }, // Ensure this matches the data key
 ];
 
 const paginationModel = { page: 0, pageSize: 5 };
@@ -20,11 +20,17 @@ const DataTable = () => {
     const fetchData = async () => {
       try {
         const response = await axios.get("http://localhost:5000/users");
-        console.log(response.data); // Log the data to the console
+        console.log("Fetched data:", response.data); // Debug: Log the fetched data
+
+        // Map the data to ensure each row has a unique `id`
         const rowsWithIds = response.data.map((row, index) => ({
-          id: row.id || `temp-id-${index}`, // Generate a temporary ID if `id` is missing
-          ...row,
+          id: row.id || `temp-id-${index}`, // Use `row.id` or generate a temporary ID
+          email: row.email || "N/A",
+          createdAt: row.createdAt || "N/A", // Ensure this matches the backend response
+          lastSignInTime: row.lastSignInTime || "N/A", // Ensure this matches the backend response
         }));
+
+        console.log("Processed rows:", rowsWithIds); // Debug: Log the processed rows
         setRows(rowsWithIds);
       } catch (error) {
         console.error("Error fetching data:", error);
