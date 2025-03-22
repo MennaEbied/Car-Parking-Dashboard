@@ -33,10 +33,10 @@ Store the API base URL in the .env file
 ## Setup Instructions 🚀
 
 ### Clone the Repository :
-```bash
-git clone https://github.com/MennaEbied/Car-Parking-Dashboard.git
 
-cd Car-Parking-Dashboard
+```git clone https://github.com/MennaEbied/Car-Parking-Dashboard.git```
+
+```cd Car-Parking-Dashboard```
 
 ### Install Dependencies
 
