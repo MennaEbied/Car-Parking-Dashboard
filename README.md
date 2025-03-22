@@ -1,5 +1,5 @@
 # Car Parking Admin Dashboard 🚗
-A modern admin dashboard built with React and SCSS for managing car parking operations.
+A modern admin dashboard built with React and SCSS for managing car parking operations for [this app] (https://github.com/MennaEbied/Car-Parking-Mobile-App)
 
 ## Technologies Used 🛠️
 Frontend:
