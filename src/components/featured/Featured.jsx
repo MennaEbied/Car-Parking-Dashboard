@@ -3,10 +3,10 @@ import { PieChart, Pie, Cell, Tooltip } from "recharts";
 
 
 const data = [
-  { name: "Group A", value: 400 },
-  { name: "Group B", value: 300 },
-  { name: "Group C", value: 300 },
-  { name: "Group D", value: 200 },
+  { name: "Slot A", value: 40 },
+  { name: "Slot B", value: 30 },
+  { name: "Slot C", value: 30 },
+  { name: "Slot D", value: 20 },
 ];
 
 const COLORS = ["#0088FE", "#00C49F", "#FFBB28", "#FF8042"];
@@ -42,6 +42,7 @@ const renderCustomizedLabel = ({
 const Featured = () => {
   return (
     <div className="featured">
+       <div className="title">Slots</div>
       <PieChart width={200} height={200}>
         <Pie
           data={data}

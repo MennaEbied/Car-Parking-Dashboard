@@ -5,6 +5,7 @@ import Widget from "../../components/widget/Widget";
 import Chart from "../../components/chart/Chart";
 import Barchart from "../../components/barChart/BarChart";
 import DataTable from "../../components/table/Table";
+import Featured from "../../components/featured/Featured";
 
 const Home = () => {
   return (
@@ -20,7 +21,7 @@ const Home = () => {
         </div>
         <div className="charts">
           <Barchart />
-          <Chart />
+          <Featured />
         </div>
         <div className="listContainer">
           <div className="listTitle">Users</div>
