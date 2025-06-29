@@ -1,5 +1,8 @@
 /* eslint-disable no-undef */
-require("dotenv").config(); // Load environment variables from .env file
+// Only load .env variables in a development environment
+if (process.env.NODE_ENV !== 'production') {
+  require('dotenv').config();
+}
 const admin = require("firebase-admin");
 const express = require("express");
 const cors = require("cors");
