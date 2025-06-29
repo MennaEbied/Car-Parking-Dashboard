@@ -1,10 +1,27 @@
+/* eslint-disable no-undef */
 require("dotenv").config(); // Load environment variables from .env file
 const admin = require("firebase-admin");
 const express = require("express");
 const cors = require("cors");
 
 const app = express();
-app.use(cors()); // Enable CORS for frontend requests
+
+// It's good practice to restrict CORS in production
+// This will allow requests ONLY from your deployed frontend and localhost
+const allowedOrigins = [
+  'http://localhost:3000', // For local testing
+  'https://your-frontend-app.pages.dev' // IMPORTANT: REPLACE with your Cloudflare Pages URL
+];
+
+app.use(cors({
+  origin: function(origin, callback){
+    if(!origin || allowedOrigins.includes(origin)){
+      callback(null, true);
+    } else {
+      callback(new Error('Not allowed by CORS'));
+    }
+  }
+}));
 
 // Initialize Firebase Admin SDK using environment variables
 const serviceAccount = {
@@ -21,9 +38,12 @@ const serviceAccount = {
   universe_domain: process.env.FIREBASE_UNIVERSE_DOMAIN,
 };
 
-admin.initializeApp({
-  credential: admin.credential.cert(serviceAccount),
-});
+// Prevent re-initialization on hot reloads
+if (!admin.apps.length) {
+  admin.initializeApp({
+    credential: admin.credential.cert(serviceAccount),
+  });
+}
 
 // Endpoint to fetch all users
 app.get("/users", async (req, res) => {
@@ -32,8 +52,8 @@ app.get("/users", async (req, res) => {
     const users = listUsersResult.users.map((user) => ({
       id: user.uid, // Rename `uid` to `id`
       email: user.email || "N/A",
-      createdAt: user.metadata.creationTime || "N/A", // Add creation time
-      lastSignInTime: user.metadata.lastSignInTime || "N/A", // Add last sign-in time
+      createdAt: user.metadata.creationTime || "N/A",
+      lastSignInTime: user.metadata.lastSignInTime || "N/A",
     }));
     res.json(users);
   } catch (error) {
@@ -42,7 +62,12 @@ app.get("/users", async (req, res) => {
   }
 });
 
-const PORT = 5000;
-app.listen(PORT, () => {
-  console.log(`Server running on http://localhost:${PORT}`);
-});
+// THIS IS THE CRITICAL CHANGE
+// DO NOT listen on a port. Instead, export the app.
+// Vercel will handle the rest.
+// const PORT = 5000;
+// app.listen(PORT, () => {
+//   console.log(`Server running on http://localhost:${PORT}`);
+// });
+
+module.exports = app; // <-- EXPORT THE APP
