@@ -11,7 +11,7 @@ const app = express();
 
 const allowedOrigins = [
   'http://localhost:3000', // For local testing
-  'https://car-parking-frontend.vercel.app'
+  'https://car-parking-frontend-eight.vercel.app'
 ];
 
 app.use(cors({
