@@ -1,5 +1,5 @@
 /* eslint-disable no-undef */
-// Only load .env variables in a development environment
+
 if (process.env.NODE_ENV !== 'production') {
   require('dotenv').config();
 }
@@ -9,11 +9,9 @@ const cors = require("cors");
 
 const app = express();
 
-// It's good practice to restrict CORS in production
-// This will allow requests ONLY from your deployed frontend and localhost
 const allowedOrigins = [
   'http://localhost:3000', // For local testing
-  'https://your-frontend-app.pages.dev' // IMPORTANT: REPLACE with your Cloudflare Pages URL
+  'https://car-parking-frontend.vercel.app'
 ];
 
 app.use(cors({
