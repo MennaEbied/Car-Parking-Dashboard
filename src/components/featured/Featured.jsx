@@ -3,10 +3,10 @@ import { PieChart, Pie, Cell, Tooltip } from "recharts";
 
 
 const data = [
-  { name: "Slot A", value: 40 },
-  { name: "Slot B", value: 30 },
-  { name: "Slot C", value: 30 },
-  { name: "Slot D", value: 20 },
+  { name: "Slot 1", value: 40 },
+  { name: "Slot 2", value: 30 },
+  { name: "Slot 3", value: 30 },
+  { name: "Slot 4", value: 20 },
 ];
 
 const COLORS = ["#0088FE", "#00C49F", "#FFBB28", "#FF8042"];
@@ -20,7 +20,6 @@ const renderCustomizedLabel = ({
   innerRadius,
   outerRadius,
   percent,
-  index,
 }) => {
   const radius = innerRadius + (outerRadius - innerRadius) * 0.5;
   const x = cx + radius * Math.cos(-midAngle * RADIAN);

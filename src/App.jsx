@@ -1,12 +1,11 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Bookings from "./pages/bookings/Bookings";
 import Home from "./pages/home/Home";
-import Reports from "./pages/reports/Reports";
 import Single from "./pages/single/Single";
 import Users from "./pages/users/Users";
 import { useState, useMemo, createContext, useContext } from "react";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
-import { CssBaseline, Button } from "@mui/material";
+import { CssBaseline} from "@mui/material";
 
 // Create a Context for dark mode
 const DarkModeContext = createContext();
@@ -55,7 +54,6 @@ function App() {
                 <Route path="/">
                   <Route index element={<Home />} />
                   <Route path="bookings" element={<Bookings />} />
-                  <Route path="reports" element={<Reports />} />
                   <Route path="users">
                     <Route index element={<Users />} />
                     <Route path=":userId" element={<Single />} />
