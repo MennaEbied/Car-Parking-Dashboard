@@ -51,4 +51,3 @@ Store the API base URL in the .env file
 ```cd backend```
 
 ```node index.js```
-<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/b40710fd-0503-436e-9037-9dc9161f41f2" />
